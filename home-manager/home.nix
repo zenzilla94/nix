@@ -50,6 +50,7 @@
       # Note-taking & Office
       obsidian # A powerful knowledge base that works on local Markdown files
       libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
+      doing
 
       # Email Clients
       thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
