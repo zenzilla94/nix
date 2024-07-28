@@ -8,16 +8,21 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # NixVim
+    nixvim.url = "github:zenzilla94/nixvim";
   };
 
   outputs =
     { self
     , nixpkgs
     , home-manager
+    , nixvim
     , ...
     } @ inputs:
     let
       inherit (self) outputs;
+      system = "x86_64-linux";
     in
     {
       # NixOS configuration entrypoint
@@ -26,8 +31,11 @@
         # Replace with your hostname
         zenbook = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
+          inherit system;
           # > Our main nixos configuration file <
-          modules = [ ./nixos/configuration.nix ];
+          modules = [
+            ./nixos/configuration.nix
+          ];
         };
       };
 

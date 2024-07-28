@@ -47,8 +47,9 @@
       # Terminal Emulators
       alacritty # A fast, lightweight terminal emulator
 
-      # Note-taking
+      # Note-taking & Office
       obsidian # A powerful knowledge base that works on local Markdown files
+      libreoffice-still # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
 
       # Email Clients
       thunderbird # A free and open-source email, newsfeed, chat, and calendaring client
@@ -58,6 +59,7 @@
 
       # Version Control
       gh # GitHub’s official command line tool
+      git
 
       # Terminal Multiplexers
       tmux # Terminal multiplexer
@@ -84,6 +86,8 @@
       python3 # Python programming language
       neofetch # A command-line system information tool
       nnn # Terminal file manager
+      thefuck # Correct your commands
+      copyq
 
       # Archives
       zip # Package and compress (archive) files
@@ -110,6 +114,7 @@
 
       # Productivity
       hugo # Static site generator
+
     ];
   };
 
@@ -122,8 +127,12 @@
     # Basic configuration of git
     git = {
       enable = true;
-      userName = "mike hall";
+      userName = "mike";
       userEmail = "mikehall@mikehall94.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+        safe.directory = "home/mike/dotfiles";
+      };
     };
 
     # Enable home-manager and neovim
