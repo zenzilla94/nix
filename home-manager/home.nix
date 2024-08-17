@@ -89,6 +89,8 @@
       nnn # Terminal file manager
       thefuck # Correct your commands
       copyq
+      curl
+      planify
 
       # Archives
       zip # Package and compress (archive) files
@@ -106,6 +108,8 @@
 
       # Miscellaneous
       cowsay # Configurable talking cow
+      sl
+      nyancat
       file # Determines file type
       which # Shows the full path of (shell) commands
       tree # Displays directories as trees (with optional color/HTML output)
@@ -116,6 +120,8 @@
       # Productivity
       hugo # Static site generator
 
+      direnv
+      nix-direnv
     ];
   };
 
@@ -136,9 +142,16 @@
       };
     };
 
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      # enableFishIntegration = true;
+    };
+
     # Enable home-manager and neovim
     home-manager.enable = true;
     neovim.enable = true;
+    # fish.enable = true;
   };
 
   # Nicely reload system units when changing configs

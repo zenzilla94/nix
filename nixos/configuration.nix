@@ -161,7 +161,9 @@
     nerdfonts
     home-manager
     clipmenu
+    htop
     git
+    netcat-gnu
     wl-clipboard # Needed for neovim clipboard
   ];
 
