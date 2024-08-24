@@ -11,6 +11,12 @@
 
     # NixVim
     nixvim.url = "github:zenzilla94/nixvim";
+
+    # Cosmic Desktop
+    # nixos-cosmic = {
+    #   url = "github:lilyinstarlight/nixos-cosmic";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =
@@ -18,6 +24,7 @@
     , nixpkgs
     , home-manager
     , nixvim
+      # , nixos-cosmic
     , ...
     } @ inputs:
     let
@@ -35,6 +42,13 @@
           # > Our main nixos configuration file <
           modules = [
             ./nixos/configuration.nix
+            # {
+            #   nix.settings = {
+            #     substituters = [ "https://cosmic.cachix.org/" ];
+            #     trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            #   };
+            # }
+            # nixos-cosmic.nixosModules.default
           ];
         };
       };

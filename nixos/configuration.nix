@@ -114,6 +114,9 @@
         variant = "";
       };
     };
+
+    # desktopManager.cosmic.enable = false;
+    # displayManager.cosmic-greeter.enable = false;
   };
 
   # Set your hostname
