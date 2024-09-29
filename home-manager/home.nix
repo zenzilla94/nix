@@ -4,6 +4,7 @@
 , lib
 , config
 , pkgs
+, nixpkgs-unstable
 , ...
 }: {
   # You can import other home-manager modules here
@@ -60,7 +61,8 @@
 
       # Version Control
       gh # GitHub’s official command line tool
-      git
+      git # The fast distributed version control system
+      lazygit # Simple terminal UI for git commands
 
       # Terminal Multiplexers
       tmux # Terminal multiplexer
@@ -80,7 +82,6 @@
       # Utilities
       bat # A cat clone with syntax highlighting
       ncdu # Disk usage analyzer with an ncurses interface
-      zed-editor # A high-performance code editor
       plocate # A locate command implementation
       zoxide # A smarter cd command
       bottom # A graphical process/system monitor for the terminal
@@ -107,6 +108,7 @@
       nmap # A utility for network discovery and security auditing
 
       # Miscellaneous
+      nixd
       cowsay # Configurable talking cow
       sl
       nyancat
@@ -120,8 +122,15 @@
       # Productivity
       hugo # Static site generator
 
+      nodejs
+      nodejs_22
+      lua
+      luarocks
       direnv
       nix-direnv
+
+      # Languages
+      go
     ];
   };
 
@@ -141,6 +150,14 @@
         safe.directory = "home/mike/dotfiles";
       };
     };
+
+    vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+        github.copilot
+      ];
+    };
+
 
     direnv = {
       enable = true;
