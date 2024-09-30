@@ -92,6 +92,7 @@
       copyq
       curl
       planify
+      gcc
 
       # Archives
       zip # Package and compress (archive) files
