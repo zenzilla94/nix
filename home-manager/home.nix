@@ -130,6 +130,9 @@
       direnv
       nix-direnv
 
+      nixpkgs-unstable.legacyPackages.${system}.neovim
+      starship
+
       # Languages
       go
     ];
@@ -167,8 +170,12 @@
     };
 
     # Enable home-manager and neovim
+    # neovim = {
+    #     enable = true;
+    #     package = nixpkgs-unstable.neovim;
+    # };
     home-manager.enable = true;
-    neovim.enable = true;
+
     # fish.enable = true;
   };
 

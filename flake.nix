@@ -23,6 +23,7 @@
   outputs =
     { self
     , nixpkgs
+    , nixpkgs-unstable
     , home-manager
     , nixvim
       # , nixos-cosmic
@@ -59,7 +60,7 @@
       homeConfigurations = {
         # FIXME replace with your username@hostname
         "mike@zenbook" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
           extraSpecialArgs = {
             inherit inputs outputs;
             nixpkgs-unstable = inputs.nixpkgs-unstable;
