@@ -5,6 +5,7 @@
 , config
 , pkgs
 , nixpkgs-unstable
+, zen-browser
 , ...
 }: {
   # You can import other home-manager modules here
@@ -125,13 +126,16 @@
 
       nodejs
       nodejs_22
-      lua
+      lua # Lua programming language
       luarocks
-      direnv
-      nix-direnv
+      direnv # Environment switcher for the shell
+      nix-direnv # direnv integration for nix
+      inputs.zen-browser.packages."${system}".specific # Zen Browser
 
-      nixpkgs-unstable.legacyPackages.${system}.neovim
-      starship
+      nixpkgs-unstable.legacyPackages.${system}.neovim # Vim-fork focused on extensibility and usability
+      starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell
+
+      rsync # A fast, versatile, remote (and local) file-copying tool
 
       # Languages
       go
