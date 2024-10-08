@@ -13,6 +13,9 @@
     # NixVim
     nixvim.url = "github:zenzilla94/nixvim";
 
+    # Zen Browser
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
+
     # Cosmic Desktop
     # nixos-cosmic = {
     #   url = "github:lilyinstarlight/nixos-cosmic";
@@ -25,6 +28,7 @@
     , nixpkgs
     , nixpkgs-unstable
     , home-manager
+    , zen-browser
     , nixvim
       # , nixos-cosmic
     , ...
@@ -64,6 +68,7 @@
           extraSpecialArgs = {
             inherit inputs outputs;
             nixpkgs-unstable = inputs.nixpkgs-unstable;
+            zen-browser = inputs.zen-browser;
           };
           # > Our main home-manager configuration file <
           modules = [ ./home-manager/home.nix ];
