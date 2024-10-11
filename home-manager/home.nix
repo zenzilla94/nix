@@ -1,3 +1,14 @@
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                         home.nix                         ║
+#          ╚══════════════════════════════════════════════════════════╝
+
+
+# ══ TODO: ═════════════════════════════════════════════════════════════
+#
+# - [ ] Modularize packages into separate configuration files
+
+
+
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 { inputs
@@ -123,6 +134,9 @@
 
       # Productivity
       hugo # Static site generator
+      yazi
+      file
+      ueberzugpp
 
       nodejs
       nodejs_22
@@ -133,9 +147,12 @@
       inputs.zen-browser.packages."${system}".specific # Zen Browser
 
       nixpkgs-unstable.legacyPackages.${system}.neovim # Vim-fork focused on extensibility and usability
+
       starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
       rsync # A fast, versatile, remote (and local) file-copying tool
+      duplicati # Free backup software to store encrypted backups online
+      taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
 
       # Languages
       go
