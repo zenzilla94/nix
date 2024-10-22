@@ -136,7 +136,7 @@
       hugo # Static site generator
       yazi
       file
-      ueberzugpp
+      kitty
 
       nodejs
       nodejs_22
@@ -153,9 +153,15 @@
       rsync # A fast, versatile, remote (and local) file-copying tool
       duplicati # Free backup software to store encrypted backups online
       taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
+      spotify
 
-      # Languages
+      darktable
+      gimp
       go
+      poetry
+
+      cheat
+      tldr
     ];
   };
 
