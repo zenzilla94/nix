@@ -168,6 +168,8 @@
     git
     netcat-gnu
     wl-clipboard # Needed for neovim clipboard
+    gnome-extension-manager
+    gnome.gnome-shell-extensions
   ];
 
   # Fonts
