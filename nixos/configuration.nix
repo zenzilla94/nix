@@ -38,11 +38,16 @@
     };
   };
 
+
   nix =
     let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
     in
     {
+      extraOptions = ''
+        trusted-users = root mike
+      '';
+
       settings = {
         # Enable flakes and new 'nix' command
         experimental-features = "nix-command flakes";
