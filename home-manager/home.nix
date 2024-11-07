@@ -97,13 +97,17 @@
       plocate # A locate command implementation
       zoxide # A smarter cd command
       bottom # A graphical process/system monitor for the terminal
-      python3 # Python programming language
+      python312 # Python programming language
+      python312Packages.numpy
+      # python3
       neofetch # A command-line system information tool
       nnn # Terminal file manager
       thefuck # Correct your commands
       copyq
       curl
       planify
+      cmake
+      ninja
       gcc
 
       # Archives
@@ -145,15 +149,18 @@
       direnv # Environment switcher for the shell
       nix-direnv # direnv integration for nix
       inputs.zen-browser.packages."${system}".specific # Zen Browser
+      marksman
 
       nixpkgs-unstable.legacyPackages.${system}.neovim # Vim-fork focused on extensibility and usability
 
+      nixpkgs-unstable.legacyPackages.${system}.streamrip # Vim-fork focused on extensibility and usability
       starship # The minimal, blazing-fast, and infinitely customizable prompt for any shell
 
       rsync # A fast, versatile, remote (and local) file-copying tool
       duplicati # Free backup software to store encrypted backups online
       taskwarrior3 # Taskwarrior is Free and Open Source Software that manages your TODO list from the command line
       spotify
+      devenv
 
       darktable
       gimp
