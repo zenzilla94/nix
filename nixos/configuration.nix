@@ -38,6 +38,10 @@
     };
   };
 
+  extraOptions = ''
+      trusted-users = root mike
+  '';
+
 
   nix =
     let
